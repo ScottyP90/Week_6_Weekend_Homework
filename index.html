@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Comic Book List </title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <h1>Comic Book Log</h1>
+  <h3>Make a list of your favourite comic books to help you remember the good one.</h3>
+  <h2>Add Comic</h2>
+  <form id="new-comic-form" autocomplete="off">
+    <div id="form-wrap">
+      <div class="comic-item">
+        <label for="comicName" class="primary">Comic Name:</label>
+        <input type="text" id="comicName" required>
+      </div>
+
+      <div class="comic-item">
+        <label for="issue" class="primary">Issue/Volume Number:</label>
+        <input type="number" id="issue" min="0" required>
+      </div>
+
+      <div class="comic-item">
+        <label for="publisher" class="primary">Publisher:</label>
+        <input type="text" id="publisher" required>
+      </div>
+
+      <div class="comic-item">
+        <label for="price" class="primary">Comic price:</label>
+        <input type="number" id="price" min="0" step="0.01">
+      </div>
+
+      <div class="comic-item">
+        <label for="rating" class="primary">Comic Rating:</label>
+        <select id="rating">
+          <option value="" disabled selected></option>
+          <option value="&#9733;">1 Star</option>
+          <option value="&#9733;&#9733;">2 Stars</option>
+          <option value="&#9733;&#9733;&#9733;">3 Stars</option>
+          <option value="&#9733;&#9733;&#9733;&#9733;">4 Stars</option>
+          <option value="&#9733;&#9733;&#9733;&#9733;&#9733;">5 Stars</option>
+        </select>
+      </div>
+        <p>What do you think of the Comic?</p>
+      <div class="comic-item">
+
+        <input type="radio" id="opinion1" name="opinion" value="Great">
+        <label for="option1">Great</label>
+
+        <input type="radio" id="opinion2" name="opinion" value="Not Bad">
+        <label for="option2">Not Bad</label>
+
+        <input type="radio" id="opinion3" name="opinion" value="Terrible">
+        <label for="option3">Terrible</label>
+
+      </div>
+
+      <input id="save-button" type="submit" value="Save Comic">
+
+    </div>
+  </form>
+
+  <button id ="delete-all-button">Delete All Comic</button>
+
+  <h2>Comics Added</h2>
+  <div id="comic-list">
+
+  </div>
+</body>
+</html>
